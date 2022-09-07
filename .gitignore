@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/01-first-project/test-app-1/node_modules
+node_modules
 /.idea
 /.pnp
 .pnp.js
