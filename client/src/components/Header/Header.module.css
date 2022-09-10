@@ -1,0 +1,11 @@
+.header {
+    grid-area: header;
+    background-color: #54769b;
+}
+.header img {
+    width: 60px;
+}
+.logoText {
+    font-size: 30px;
+    color: white;
+}
