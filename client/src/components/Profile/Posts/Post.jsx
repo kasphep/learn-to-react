@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from '../Profile.module.css';
 
-const Post = ({message}) => {
+const Post = ({post}) => {
     return (
         <div className={classes.item}>
-            <img className = {classes.img} src = 'example-post.png'/>
-            <span> {message} </span>
-            <span> like </span>
+            <img className = {classes.img} src ={post.img}/>
+            <span> {post.message} </span>
+            <div> Like: {post.likes} </div>
         </div>
     )
 }
