@@ -7,8 +7,8 @@ import Dialogs from "./Dialogs/Dialogs";
 const Content = () => {
     return (
         <div className={classes.content}>
-            <Profile />
-            {/*<Dialogs />*/}
+            {/*<Profile />*/}
+            <Dialogs />
         </div>
     );
 }
