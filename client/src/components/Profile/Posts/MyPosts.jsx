@@ -7,7 +7,8 @@ const MyPosts = () => {
     return (
         <div>
             <AddPost />
-            <Post />
+            <Post message = 'Hello World!'/>
+            <Post message = 'Bb World!'/>
         </div>
     )
 }
