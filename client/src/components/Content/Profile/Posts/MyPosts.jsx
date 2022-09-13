@@ -3,18 +3,13 @@ import classes from '../Profile.module.css';
 import AddPost from "./AddPost";
 import Post from "./Post";
 
-const MyPosts = () => {
-    const postDataA = {
-        img: 'example-post.png',
-        message: 'Hello World!',
-        likes: 10
-    }
+import veshiyPost from "../../../../temporaryServer/Posts/Veshiy/data";
+import demonPost from "../../../../temporaryServer/Posts/Demon/data";
 
-    const postDataB = {
-        img: 'example-post.png',
-        message: 'Bb World!',
-        likes: 3
-    }
+
+const MyPosts = () => {
+    const postDataA = veshiyPost
+    const postDataB = demonPost
 
     return (
         <div>
