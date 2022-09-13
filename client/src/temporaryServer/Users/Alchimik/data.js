@@ -1,7 +1,7 @@
-const Alchimik = {
+const Data = {
     obl: './obl.jpg',
     ava: './ava.png',
     name: 'Alchimik',
 }
 
-export default Alchimik;
+export default Data;

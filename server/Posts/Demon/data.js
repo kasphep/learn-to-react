@@ -1,6 +1,6 @@
 const demonPost = {
     img: './temporaryServer/Posts/Demon/img.png',
-    message: 'My result of working. You likes Demon?',
+    message: 'My second result of working. You likes Demon?',
     likes: '2',
 }
 
