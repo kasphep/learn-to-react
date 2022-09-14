@@ -11,11 +11,13 @@
     padding: 10px;
 }
 .dialog_item.active {
-    color: #06329b;
+    color: white;
+    background-color: lightblue;
 }
 
 .messages {
     padding: 10px;
+    background-color: lightblue;
 }
 .message_item {
     padding: 10px;
