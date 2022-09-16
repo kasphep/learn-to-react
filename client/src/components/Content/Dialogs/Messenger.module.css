@@ -14,6 +14,10 @@
     color: white;
     background-color: lightblue;
 }
+.dialog_item a {
+    color: #06329b;
+    text-decoration: none;
+}
 
 .messages {
     padding: 10px;

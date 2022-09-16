@@ -1,11 +1,15 @@
 import React from 'react';
-import classes from '../Profile.module.css';
+import classes from './Posts.module.css';
 
 const AddPost = () => {
     return (
-        <div>
-            <textarea></textarea>
-            <button>Add post</button>
+        <div className={classes.addPost}>
+            <div>
+                <textarea></textarea>
+            </div>
+            <div>
+                <button>Add post</button>
+            </div>
         </div>
     )
 }

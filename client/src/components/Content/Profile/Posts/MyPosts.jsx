@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../Profile.module.css';
+import classes from './Posts.module.css';
 import AddPost from "./AddPost";
 import Post from "./Post";
 
@@ -13,9 +13,10 @@ const MyPosts = () => {
 
     return (
         <div>
-            <AddPost />
-            <Post post = {postDataA}/>
-            <Post post = {postDataB}/>
+            <h3>MyPosts</h3>
+            <AddPost/>
+            <Post post={postDataA}/>
+            <Post post={postDataB}/>
         </div>
     )
 }
