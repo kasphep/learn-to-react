@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const Message = ({messageData}) => {
     return (
         <div className={classes.message}>
-            {messageData.message}
+            {messageData[0].message}
         </div>
     );
 }

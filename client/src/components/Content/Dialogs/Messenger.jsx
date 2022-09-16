@@ -6,34 +6,36 @@ import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 
 
-const dialogA = {
-    id: "001",
-    name: "Hella Tendy",
-};
-const dialogB = {
-    id: "002",
-    name: "Alchymick",
-};
+const messagesData = [
+    {
+        message: "Hi!"
+    },
+    {
+        message: "Hi?"
+    }
+]
 
 
-const messageA = {
-    message: "Hi!"
-};
-const messageB = {
-    message: "Hi?"
-};
+const dialogsData = [
+    {
+        id: "001",
+        name: "Hella",
+    },
+    {
+        id: "002",
+        name: "Alchymick",
+    }
+]
 
 
 const Messenger = () => {
     return (
         <div className={classes.messenger}>
             <div className={classes.dialogs}>
-                <Dialog dialogData={dialogA}/>
-                <Dialog dialogData={dialogB}/>
+                <Dialog dialogData={dialogsData}/>
             </div>
             <div className={classes.messages}>
-                <Message messageData={messageA}/>
-                <Message messageData={messageB}/>
+                <Message messageData={messagesData}/>
             </div>
         </div>
     );

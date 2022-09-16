@@ -1,22 +1,34 @@
 import React from 'react';
 import classes from './User.module.css';
 
-import HellaTendy from "../../../../temporaryServer/Users/001/data";
-import Alchimik from "../../../../temporaryServer/Users/002/data";
 
-const UserA = HellaTendy;
+const userData = [
+    {
+        id: "001",
+        obl: "./temporaryServer/Users/001/obl.jpg",
+        ava: "./temporaryServer/Users/001/ava.png",
+        name: "'Hella Tendy",
+    },
+    {
+        id: "002",
+        obl: './obl.jpg',
+        ava: './ava.png',
+        name: 'Alchimik',
+    }
+];
+
 
 const UserInfo = () => {
     return (
         <div className={classes.user}>
             <div>
-                <img className={classes.obl} src={UserA.obl}/>
+                <img className={classes.obl} src={userData[0].obl}/>
             </div>
             <span>
-                <img className={classes.ava} src={UserA.ava}/>
+                <img className={classes.ava} src={userData[0].ava}/>
             </span>
             <span className={classes.name}>
-                {UserA.name}
+                {userData[0].name}
             </span>
         </div>
     )

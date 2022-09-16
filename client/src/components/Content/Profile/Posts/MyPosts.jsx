@@ -3,20 +3,30 @@ import classes from './Posts.module.css';
 import AddPost from "./AddPost";
 import Post from "./Post";
 
-import veshiyPost from "../../../../temporaryServer/Posts/Veshiy/data";
-import demonPost from "../../../../temporaryServer/Posts/Demon/data";
+
+const postsData = [
+    {
+        id: "0001",
+        img: "./temporaryServer/Posts/Veshiy/img.png",
+        message: "My first pictures, Veshiy!",
+        likes: "10",
+    },
+    {
+        id: "0002",
+        img: "./temporaryServer/Posts/Demon/img.png",
+        message: "My second result of working. You likes Demon?",
+        likes: "2",
+    }
+];
 
 
 const MyPosts = () => {
-    const postDataA = veshiyPost
-    const postDataB = demonPost
 
     return (
         <div>
             <h3>MyPosts</h3>
             <AddPost/>
-            <Post post={postDataA}/>
-            <Post post={postDataB}/>
+            <Post post={postsData[0]}/>
         </div>
     )
 }
