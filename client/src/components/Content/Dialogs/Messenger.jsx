@@ -13,8 +13,7 @@ const messagesData = [
     {
         message: "Hi?"
     }
-]
-
+];
 
 const dialogsData = [
     {
@@ -25,17 +24,21 @@ const dialogsData = [
         id: "002",
         name: "Alchymick",
     }
-]
+];
+
+
+const messageAlready = messagesData.map (data => (<Message messageData={data}/>));
+const dialogAlready = dialogsData.map (data => (<Dialog dialogData={data}/>));
 
 
 const Messenger = () => {
     return (
         <div className={classes.messenger}>
             <div className={classes.dialogs}>
-                <Dialog dialogData={dialogsData}/>
+                {dialogAlready}
             </div>
             <div className={classes.messages}>
-                <Message messageData={messagesData}/>
+                {messageAlready}
             </div>
         </div>
     );

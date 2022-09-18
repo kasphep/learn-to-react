@@ -19,6 +19,8 @@ const postsData = [
     }
 ];
 
+const postsAlready = postsData.map(data => (<Post post={data}/>));
+
 
 const MyPosts = () => {
 
@@ -26,7 +28,7 @@ const MyPosts = () => {
         <div>
             <h3>MyPosts</h3>
             <AddPost/>
-            <Post post={postsData[0]}/>
+            {postsAlready}
         </div>
     )
 }
