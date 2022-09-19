@@ -2,23 +2,7 @@ import React from 'react';
 import classes from './User.module.css';
 
 
-const userData = [
-    {
-        id: "001",
-        obl: "./temporaryServer/Users/001/obl.jpg",
-        ava: "./temporaryServer/Users/001/ava.png",
-        name: "Hella Tendy",
-    },
-    {
-        id: "002",
-        obl: './obl.jpg',
-        ava: './ava.png',
-        name: 'Alchimik',
-    }
-];
-
-
-const UserInfo = () => {
+const UserInfo = ({userData}) => {
     return (
         <div className={classes.user}>
             <div>

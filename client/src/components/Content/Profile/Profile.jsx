@@ -7,7 +7,7 @@ import UserInfo from "./User/UserInfo";
 const Profile = ({profileData}) => {
     return (
         <div className={classes.profile}>
-            <UserInfo />
+            <UserInfo userData = {profileData.userData}/>
             <MyPosts postsData = {profileData.postsData}/>
         </div>
     )
