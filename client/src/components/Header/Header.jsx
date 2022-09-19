@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Header.module.css';
 
-const Header = () => {
+const Header = ({headerData}) => {
     return (
         <header className={classes.header}>
             <img src = 'logo.png'/>

@@ -6,32 +6,9 @@ import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 
 
-const messagesData = [
-    {
-        message: "Hi!"
-    },
-    {
-        message: "Hi?"
-    }
-];
-
-const dialogsData = [
-    {
-        id: "001",
-        name: "Hella",
-    },
-    {
-        id: "002",
-        name: "Alchymick",
-    }
-];
-
-
-const messageAlready = messagesData.map (data => (<Message messageData={data}/>));
-const dialogAlready = dialogsData.map (data => (<Dialog dialogData={data}/>));
-
-
-const Messenger = () => {
+const Messenger = ({messengerData}) => {
+    const messageAlready = messengerData.messagesData.map (data => (<Message messageData={data}/>));
+    const dialogAlready = messengerData.dialogsData.map (data => (<Dialog dialogData={data}/>));
     return (
         <div className={classes.messenger}>
             <div className={classes.dialogs}>

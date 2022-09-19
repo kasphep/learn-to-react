@@ -7,13 +7,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Content from "./components/Content/Content";
 
 
-const App = () => {
+const App = ({dataApp}) => {
     return (
         <BrowserRouter>
             <div className="App">
-                <Header/>
-                <Navbar/>
-                <Content/>
+                <Header headerData = {dataApp.Header}/>
+                <Navbar navbarData = {dataApp.Navbar}/>
+                <Content contentData = {dataApp.Content}/>
             </div>
         </BrowserRouter>
     );

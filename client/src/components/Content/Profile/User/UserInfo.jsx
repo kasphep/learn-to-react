@@ -7,7 +7,7 @@ const userData = [
         id: "001",
         obl: "./temporaryServer/Users/001/obl.jpg",
         ava: "./temporaryServer/Users/001/ava.png",
-        name: "'Hella Tendy",
+        name: "Hella Tendy",
     },
     {
         id: "002",
