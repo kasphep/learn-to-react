@@ -13,7 +13,7 @@ const Content = (props) => {
         <div className={classes.content}>
             <Routes>
                 <Route path="/messenger/*" element= {<Messenger messengerData = {props.contentData.Messenger}/>}/>
-                <Route path="/profile" element={<Profile profileData = {props.contentData.Profile} addPost = {props.addPost}/>}/>
+                <Route path="/profile" element={<Profile profileData = {props.contentData.Profile} addPost = {props.addPost} updateNewPostText = {props.updateNewPostText}/>}/>
                 <Route path="/news" element= {<News newsData = {props.contentData.News}/>}/>
                 <Route path="/music" element={<Music musicData = {props.contentData.Music}/>}/>
                 <Route path="/settings" element= {<Settings settingsData = {props.contentData.Settings}/>}/>

@@ -13,7 +13,7 @@ const App = (props) => {
             <div className="App">
                 <Header headerData = {props.state.Header}/>
                 <Navbar navbarData = {props.state.Navbar}/>
-                <Content contentData = {props.state.Content} addPost = {props.addPost}/>
+                <Content contentData = {props.state.Content} addPost = {props.addPost} updateNewPostText = {props.updateNewPostText}/>
             </div>
         </BrowserRouter>
     );

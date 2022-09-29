@@ -9,7 +9,7 @@ const MyPosts = (props) => {
     return (
         <div>
             <h3>MyPosts</h3>
-            <AddPost addPost={props.addPost}/>
+            <AddPost addPost={props.addPost} newPostText = {props.newPostText} updateNewPostText = {props.updateNewPostText}/>
             {postsAlready}
         </div>
     )

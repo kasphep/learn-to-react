@@ -1,4 +1,4 @@
 import {rerenderEntireTree} from './render';
-import state from "./redax/state";
+import * as fullState from "./redax/state";
 
-rerenderEntireTree(state);
+rerenderEntireTree(fullState.state, fullState.addPost, fullState.updateNewPostText);

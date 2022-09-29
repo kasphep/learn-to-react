@@ -1,10 +1,11 @@
 import {rerenderEntireTree} from "../render";
 
-let state = {
+export let state = {
     Header: {},
     Navbar: {},
     Content: {
         Profile: {
+            newPostText : "MidNight",
             postsData: [
                 {
                     id: "0001",
@@ -67,7 +68,11 @@ export let addPost = (postText) => {
         message: postText,
         likes: "0",
     });
+    updateNewPostText("");
     rerenderEntireTree(state);
 }
 
-export default state;
+export let updateNewPostText = (newText) => {
+    state.Content.Profile.newPostText = newText;
+    rerenderEntireTree(state);
+}
