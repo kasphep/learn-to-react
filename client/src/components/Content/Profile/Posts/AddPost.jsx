@@ -2,14 +2,15 @@ import React from 'react';
 import classes from './Posts.module.css';
 
 
-const newPostElement = React.createRef();
+const AddPost = (props) => {
 
-const addPost = () => {
-    const postText = newPostElement.current.value;
-    alert (postText);
-}
+    const newPostElement = React.createRef();
 
-const AddPost = () => {
+    const addTextPost = () => {
+        const postText = newPostElement.current.value;
+        props.addPost(postText);
+    }
+
     return (
         <div className={classes.addPost}>
             <div>
@@ -18,7 +19,7 @@ const AddPost = () => {
                 </textarea>
             </div>
             <div>
-                <button onClick={addPost}>
+                <button onClick={addTextPost}>
                     Add post
                 </button>
             </div>

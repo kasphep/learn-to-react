@@ -1,4 +1,4 @@
-
+import {rerenderEntireTree} from "../render";
 
 let state = {
     Header: {},
@@ -59,5 +59,15 @@ let state = {
         Settings: {}
     },
 };
+
+export let addPost = (postText) => {
+    state.Content.Profile.postsData.push ({
+        id: "0003",
+        img: "./temporaryServer/Posts/Zhnec/img.png",
+        message: postText,
+        likes: "0",
+    });
+    rerenderEntireTree(state);
+}
 
 export default state;

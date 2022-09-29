@@ -4,12 +4,12 @@ import AddPost from "./AddPost";
 import Post from "./Post";
 
 
-const MyPosts = ({postsData}) => {
-    const postsAlready = postsData.map(data => (<Post post={data}/>));
+const MyPosts = (props) => {
+    const postsAlready = props.postsData.map(data => (<Post post={data}/>));
     return (
         <div>
             <h3>MyPosts</h3>
-            <AddPost/>
+            <AddPost addPost={props.addPost}/>
             {postsAlready}
         </div>
     )
