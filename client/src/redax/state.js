@@ -4,7 +4,7 @@ let store = {
         Navbar: {},
         Content: {
             Profile: {
-                newPostText : "MidNight",
+                newPostText: "MidNight",
                 postsData: [
                     {
                         id: "0001",
@@ -59,29 +59,34 @@ let store = {
             Settings: {}
         },
     },
-    getState () {
-      return this._state;
-    },
     _callSubscribe() {
         console.log('State change');
     },
-    subscribe (observer) {
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
         this._callSubscribe = observer;
     },
-    addPost (postText) {
-        this._state.Content.Profile.postsData.push ({
-            id: "0003",
-            img: "./temporaryServer/Posts/Zhnec/img.png",
-            message: postText,
-            likes: "0",
-        });
-        this.updateNewPostText("");
-        this._callSubscribe(this._state);
-    },
-    updateNewPostText (newText) {
-        this._state.Content.Profile.newPostText = newText;
-        this._callSubscribe(this._state);
-    },
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            this._state.Content.Profile.postsData.push({
+                id: "0003",
+                img: "./temporaryServer/Posts/Zhnec/img.png",
+                message: this._state.Content.Profile.newPostText,
+                likes: "0",
+            });
+            this.dispatch({
+                type: 'UPDATE-NEW-POST-TEXT',
+                newText: "",
+            });
+            this._callSubscribe(this._state);
+        }
+        if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.Content.Profile.newPostText = action.newText;
+            this._callSubscribe(this._state);
+        }
+    }
 }
 
 export default store;
