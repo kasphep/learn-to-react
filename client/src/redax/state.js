@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
 
 let store = {
     _state: {
@@ -7,7 +9,7 @@ let store = {
         Navbar: {},
         Content: {
             Profile: {
-                newPostText: "MidNight",
+                newPostText: "",
                 postsData: [
                     {
                         id: "0001",
@@ -56,6 +58,7 @@ let store = {
                         message: "Hi?"
                     },
                 ],
+                newMessageText: "",
             },
             News: {},
             Music: {},
@@ -87,6 +90,20 @@ let store = {
         }
         if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.Content.Profile.newPostText = action.newText;
+            this._callSubscribe(this._state);
+        }
+        if (action.type === ADD_MESSAGE) {
+            this._state.Content.Messenger.messagesData.push({
+                message: this._state.Content.Messenger.newMessageText,
+            })
+            this.dispatch({
+                type: UPDATE_NEW_MESSAGE_TEXT,
+                newText: "",
+            });
+            this._callSubscribe(this._state);
+        }
+        if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+            this._state.Content.Messenger.newMessageText = action.newText;
             this._callSubscribe(this._state);
         }
     }
