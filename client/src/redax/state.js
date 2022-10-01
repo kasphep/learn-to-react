@@ -1,3 +1,6 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 let store = {
     _state: {
         Header: {},
@@ -69,7 +72,7 @@ let store = {
         this._callSubscribe = observer;
     },
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
+        if (action.type === ADD_POST) {
             this._state.Content.Profile.postsData.push({
                 id: "0003",
                 img: "./temporaryServer/Posts/Zhnec/img.png",
@@ -77,12 +80,12 @@ let store = {
                 likes: "0",
             });
             this.dispatch({
-                type: 'UPDATE-NEW-POST-TEXT',
+                type: UPDATE_NEW_POST_TEXT,
                 newText: "",
             });
             this._callSubscribe(this._state);
         }
-        if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.Content.Profile.newPostText = action.newText;
             this._callSubscribe(this._state);
         }
