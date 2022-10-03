@@ -1,7 +1,8 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
+import profileReducer from "./profile-reducer";
+import messengerReducer from "./messenger-reducer";
+import newsReducer from "./news-reducer";
+import musicReducer from "./music-reducer";
+import settingsReducer from "./settings-reducer";
 
 let store = {
     _state: {
@@ -75,37 +76,12 @@ let store = {
         this._callSubscribe = observer;
     },
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            this._state.Content.Profile.postsData.push({
-                id: "0003",
-                img: "./temporaryServer/Posts/Zhnec/img.png",
-                message: this._state.Content.Profile.newPostText,
-                likes: "0",
-            });
-            this.dispatch({
-                type: UPDATE_NEW_POST_TEXT,
-                newText: "",
-            });
-            this._callSubscribe(this._state);
-        }
-        if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.Content.Profile.newPostText = action.newText;
-            this._callSubscribe(this._state);
-        }
-        if (action.type === ADD_MESSAGE) {
-            this._state.Content.Messenger.messagesData.push({
-                message: this._state.Content.Messenger.newMessageText,
-            })
-            this.dispatch({
-                type: UPDATE_NEW_MESSAGE_TEXT,
-                newText: "",
-            });
-            this._callSubscribe(this._state);
-        }
-        if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.Content.Messenger.newMessageText = action.newText;
-            this._callSubscribe(this._state);
-        }
+        this._state.Content.Profile = profileReducer(this._state.Content.Profile, action);
+        this._state.Content.Messenger = messengerReducer(this._state.Content.Messenger, action);
+        this._state.Content.News = newsReducer(this._state.Content.News, action);
+        this._state.Content.Music = musicReducer(this._state.Content.Music, action);
+        this._state.Content.Settings = settingsReducer(this._state.Content.Settings, action);
+        this._callSubscribe(this._state);
     }
 }
 
