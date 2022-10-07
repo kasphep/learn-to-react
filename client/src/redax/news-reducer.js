@@ -1,7 +1,14 @@
 
 
-export const newsReducer = (state, action) => {
-    return state;
+const defaultState = {
+
+}
+
+export const newsReducer = (state = defaultState, action) => {
+    switch (action.type) {
+        default:
+            return state
+    }
 }
 
 export default newsReducer;

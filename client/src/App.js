@@ -5,13 +5,13 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Content from "./components/Content/Content";
 
-const App = (props) => {
+const App = () => {
     return (
-            <div className="App">
-                <Header headerData = {props.state.Header}/>
-                <Navbar navbarData = {props.state.Navbar}/>
-                <Content contentData = {props.state.Content} dispatch = {props.dispatch}/>
-            </div>
+        <div className="App">
+            <Header/>
+            <Navbar/>
+            <Content/>
+        </div>
     );
 }
 

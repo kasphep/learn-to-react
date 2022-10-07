@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import store from "./redax/state";
+import {Provider} from "react-redux";
+import store from "./redax/store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
     root.render(
-        <React.StrictMode>
+        <Provider store={store}>
             <BrowserRouter>
-                <App state={state} dispatch={store.dispatch.bind(store)}/>
+                <App/>
             </BrowserRouter>
-        </React.StrictMode>);
+        </Provider>
+    )
 }
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree();
 
 store.subscribe(rerenderEntireTree);
+window.store = store;
+window.state = store.getState();

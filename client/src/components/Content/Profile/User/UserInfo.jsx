@@ -2,17 +2,17 @@ import React from 'react';
 import classes from './User.module.css';
 
 
-const UserInfo = ({userData}) => {
+const UserInfo = ({userInfoData}) => {
     return (
         <div className={classes.user}>
             <div>
-                <img className={classes.obl} src={userData[0].obl}/>
+                <img className={classes.obl} src={userInfoData.obl}/>
             </div>
             <span>
-                <img className={classes.ava} src={userData[0].ava}/>
+                <img className={classes.ava} src={userInfoData.ava}/>
             </span>
             <span className={classes.name}>
-                {userData[0].name}
+                {userInfoData.name}
             </span>
         </div>
     )

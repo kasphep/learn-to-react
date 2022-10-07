@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import classes from './Content.module.css';
 
 import Profile from "./Profile/Profile";
-import Messenger from "./Dialogs/Messenger";
+import Messenger from "./Messenger/Messenger";
 import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
@@ -12,11 +12,11 @@ const Content = (props) => {
     return (
         <div className={classes.content}>
             <Routes>
-                <Route path="/messenger/*" element= {<Messenger messengerData = {props.contentData.Messenger} dispatch = {props.dispatch}/>}/>
-                <Route path="/profile" element={<Profile profileData = {props.contentData.Profile} dispatch = {props.dispatch}/>}/>
-                <Route path="/news" element= {<News newsData = {props.contentData.News}/>}/>
-                <Route path="/music" element={<Music musicData = {props.contentData.Music}/>}/>
-                <Route path="/settings" element= {<Settings settingsData = {props.contentData.Settings}/>}/>
+                <Route path="/messenger/*" element= {<Messenger/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/news" element= {<News/>}/>
+                <Route path="/music" element={<Music/>}/>
+                <Route path="/settings" element= {<Settings/>}/>
             </Routes>
         </div>
     );
