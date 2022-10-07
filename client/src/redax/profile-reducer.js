@@ -7,13 +7,13 @@ const defaultState = {
     postsData: [
         {
             id: "0001",
-            img: "./temporaryServer/MyPosts/Veshiy/img.png",
+            img: "./temporaryServer/Posts/Veshiy/img.png",
             message: "My first pictures, Veshiy!",
             likes: "10",
         },
         {
             id: "0002",
-            img: "./temporaryServer/MyPosts/Demon/img.png",
+            img: "./temporaryServer/Posts/Demon/img.png",
             message: "My second result of working. You likes Demon?",
             likes: "2",
         }
@@ -39,7 +39,7 @@ export const profileReducer = (state = defaultState, action) => {
         case ADD_POST: {
             state.postsData.push({
                 id: "0003",
-                img: "./temporaryServer/MyPosts/Zhnec/img.png",
+                img: "./temporaryServer/Posts/Zhnec/img.png",
                 message: state.newPostText,
                 likes: "0",
             });

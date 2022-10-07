@@ -1,8 +1,10 @@
+@import url(//db.onlinewebfonts.com/c/a44207bfe4040f536c824dbbf82f5ed1?family=e-Ukraine);
+
 .App {
   margin: 0 auto;
   display: grid;
   width: 1200px;
-  font-family: "e-Ukraine Head";
+  font-family: "e-Ukraine";
 
   grid-template-areas:
   "header header"
