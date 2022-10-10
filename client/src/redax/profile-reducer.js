@@ -21,14 +21,14 @@ const defaultState = {
     userData: [
         {
             id: "001",
-            obl: "./temporaryServer/Users/001/obl.jpg",
-            ava: "./temporaryServer/Users/001/ava.png",
+            obl: "http://localhost:4444/85aab997-35ba-4952-b4a2-68308e2d8b68.png",
+            ava: "http://localhost:4444/d01e1857-4d44-4073-8405-105a7cd4d43e.png",
             name: "Hella Tendy",
         },
         {
             id: "002",
-            obl: './obl.jpg',
-            ava: './ava.png',
+            obl: 'http://localhost:4444/c167d9aa-b9f8-4f83-995e-936672cbce55.png',
+            ava: 'http://localhost:4444/f0ae0535-551b-477c-9828-0583a8db9dcf.png',
             name: 'Alchimik',
         }
     ],
