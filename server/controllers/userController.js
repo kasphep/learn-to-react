@@ -52,7 +52,12 @@ class UserController {
             let offset = (page-1)*limit;
             if(!login && !password && !name) {
                 users = await User.findAll({limit, offset});
-                return res.json(users);
+                return res.json(users.map(users => ({
+                    id: users.id,
+                    obl: users.obl,
+                    ava: users.ava,
+                    name: users.name
+                })));
             } else {
                 if (login) users = await User.findAll({where: {login}, limit, offset});
                 if (password) users = await User.findAll({where: {password}, limit, offset});

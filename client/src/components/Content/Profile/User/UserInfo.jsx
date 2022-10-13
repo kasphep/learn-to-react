@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './User.module.css';
 
 
-const UserInfo = ({userInfoData}) => {
+const UserInfo = ({userInfoData, setUsers}) => {
     return (
         <div className={classes.user}>
             <div>
@@ -14,6 +14,7 @@ const UserInfo = ({userInfoData}) => {
             <span className={classes.name}>
                 {userInfoData.name}
             </span>
+            <button onClick={setUsers}> setUsers</button>
         </div>
     )
 }

@@ -1,5 +1,8 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+export const ADD_POST = 'ADD-POST';
+export const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+export const GET_ONE_USER = 'GET-ONE-USER';
+export const SET_ALL_USERS = 'SET-ALL-USERS';
+
 
 
 const defaultState = {
@@ -36,6 +39,10 @@ const defaultState = {
 
 export const profileReducer = (state = defaultState, action) => {
     switch (action.type) {
+        case SET_ALL_USERS: {
+            console.log(action.payload);
+            return state;
+        }
         case ADD_POST: {
             state.postsData.push({
                 id: "0003",
@@ -48,10 +55,10 @@ export const profileReducer = (state = defaultState, action) => {
         }
         case UPDATE_NEW_POST_TEXT: {
             state.newPostText = action.newText;
-            return state
+            return state;
         }
         default:
-            return state
+            return state;
     }
 }
 

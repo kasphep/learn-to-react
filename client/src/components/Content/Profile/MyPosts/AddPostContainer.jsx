@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Posts.module.css';
 import {
     addPostActionCreator, updateNewPostTextActionCreator
-} from '../../ActionCreators'
+} from '../../../../redax/ActionCreators'
 import AddPost from "./AddPost";
 import {useDispatch, useSelector} from "react-redux";
 

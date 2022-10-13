@@ -3,7 +3,7 @@ import classes from '../Messenger.module.css';
 import {
     addMessageActionCreator,
     updateNewMessageTextActionCreator,
-} from '../../ActionCreators'
+} from '../../../../redax/ActionCreators'
 import {useDispatch, useSelector} from "react-redux";
 import AddMessage from "./AddMessage";
 
