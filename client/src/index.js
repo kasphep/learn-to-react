@@ -8,6 +8,7 @@ import store from "./redax/store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let rerenderEntireTree = () => {
+
     root.render(
         <Provider store={store}>
             <BrowserRouter>

@@ -6,21 +6,14 @@ const defaultState = {
     newMessageText: "",
     dialogsData: [
         {
-            id: "001",
-            name: "Hella",
-        },
-        {
-            id: "002",
-            name: "Alchymick",
+            id: "0",
+            name: "Download...",
         }
     ],
     messagesData: [
         {
-            message: "Hi!"
-        },
-        {
-            message: "Hi?"
-        },
+            message: "Download..."
+        }
     ],
 };
 

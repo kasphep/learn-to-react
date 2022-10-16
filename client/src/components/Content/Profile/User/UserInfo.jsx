@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './User.module.css';
 
 
-const UserInfo = ({userInfoData, setUsers}) => {
+const UserInfo = ({userInfoData, testAPI}) => {
     return (
         <div className={classes.user}>
             <div>
@@ -14,7 +14,9 @@ const UserInfo = ({userInfoData, setUsers}) => {
             <span className={classes.name}>
                 {userInfoData.name}
             </span>
-            <button onClick={setUsers}> setUsers</button>
+            <button onClick={testAPI}>
+                Test API button
+            </button>
         </div>
     )
 }

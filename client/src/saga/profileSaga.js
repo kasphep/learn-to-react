@@ -1,11 +1,14 @@
 import {put, takeEvery, call} from "redux-saga/effects";
-import {FETCH_ALL_USERS, GET_ONE_USER, setAllUser} from "../redax/ActionCreators";
+import {FETCH_ALL_USERS, FETCH_ONE_USER, setAllUser, setOneUser} from "../redax/ActionCreators";
 
 const fetchUsersFromAPI = () => fetch('http://localhost:4444/api/user/getAll');
+const fetchUserFromAPI = () => fetch('http://localhost:4444/api/user/1');
 
 
-function* fetchOneUserWorker(id) {
-
+function* fetchOneUserWorker() {
+    const oneUsersData = yield call((fetchUserFromAPI));
+    const oneUsersJSON = yield call(() => new Promise(res => res(oneUsersData.json())));
+    yield put(setOneUser(oneUsersJSON));
 }
 
 function* fetchAllWorker() {
@@ -17,4 +20,5 @@ function* fetchAllWorker() {
 
 export function* profileWatcher() {
     yield takeEvery(FETCH_ALL_USERS, fetchAllWorker);
+    yield takeEvery(FETCH_ONE_USER, fetchOneUserWorker);
 }
